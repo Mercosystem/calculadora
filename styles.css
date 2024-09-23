@@ -5,34 +5,39 @@ body {
     color: white;
     text-align: center;
     background-image: url('https://i.imgur.com/your-image-link.jpg'); /* Substitua pelo seu link do Imgur */
-    background-size: cover; /* Para cobrir toda a tela */
-    background-position: center; /* Centralizar a imagem */
-    background-repeat: no-repeat; /* Evitar repetição da imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #container {
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para destacar o conteúdo */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
     border-radius: 10px;
     max-width: 1000px;
-    margin: auto; /* Centralizar o container */
+    margin: auto;
 }
 
 #cables-container {
     margin-bottom: 20px;
     display: flex;
     justify-content: center; /* Centralizar os cabos */
-    flex-wrap: wrap; /* Permitir quebra de linha em telas menores */
+    flex-wrap: wrap; /* Permitir quebra de linha */
 }
 
 .cable-checkbox {
     margin-right: 10px;
 }
 
+.cable-input {
+    width: 50px; /* Definindo o tamanho menor para os campos de texto */
+    margin-right: 10px;
+}
+
 #input-container {
     margin-bottom: 20px;
     max-width: 600px;
-    margin: auto; /* Centralizar o container */
+    margin: auto;
 }
 
 #input-container label {
@@ -49,7 +54,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap; /* Permitir que os resultados se ajustem em telas menores */
+    flex-wrap: wrap;
 }
 
 .result-box {
@@ -70,7 +75,7 @@ body {
     pointer-events: none;
 }
 
-/* Media Queries para melhorar a responsividade */
+/* Media Queries */
 @media (max-width: 768px) {
     #cables-container {
         flex-direction: column;
@@ -87,7 +92,7 @@ body {
     }
 
     #background-text {
-        font-size: 80px; /* Reduzir o tamanho do texto de fundo em telas menores */
+        font-size: 80px;
     }
 }
 
