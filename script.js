@@ -2,6 +2,7 @@ document.getElementById('calculate-btn').addEventListener('click', function() {
     const targetValue = parseInt(document.getElementById('target-value').value);
     const maxCables = parseInt(document.getElementById('max-cables').value);
     const cableCheckboxes = document.querySelectorAll('.cable-checkbox');
+    const cableInputs = document.querySelectorAll('.cable-input');
     
     if (isNaN(targetValue) || isNaN(maxCables)) {
         alert('Por favor, insira valores válidos.');
@@ -9,8 +10,8 @@ document.getElementById('calculate-btn').addEventListener('click', function() {
     }
 
     const selectedValues = Array.from(cableCheckboxes)
-        .filter(checkbox => checkbox.checked)
-        .map(checkbox => parseInt(checkbox.value));
+        .map((checkbox, index) => checkbox.checked ? parseInt(cableInputs[index].value) : null)
+        .filter(value => value !== null);
 
     if (selectedValues.length === 0) {
         alert('Por favor, selecione ao menos um tipo de cabo.');
